@@ -1,0 +1,43 @@
+<!-- dynamically displayed user data -->
+
+
+<!-- using normal zone approach -->
+<!-- <div>
+
+    event listener
+    <button (click)="onSelectUser()">
+       property binding
+        <img [src]="imageUrl" [alt]="selectedUser.name"/>
+
+        string interpolation
+        <span>{{selectedUser.name}}</span>
+    </button>
+</div> -->
+
+
+
+<!-- usiing signal approach -->
+<!-- <div>
+
+    event listener
+    <button (click)="onSelectUser()">
+       property binding
+        <img [src]="imageUrl()" [alt]="selectedUser().name"/>
+
+        string interpolation
+        <span>{{selectedUser().name}}</span>
+    </button>
+</div> -->
+
+
+<app-card>
+
+    <!-- event listener -->
+    <button [class.active]="selected" (click)="onSelectUser()">
+       <!-- property binding -->
+        <img [src]="imageUrl" [alt]="User.name"/>
+
+        <!-- string interpolation -->
+        <span>{{User.name}}</span>
+    </button>
+</app-card>
